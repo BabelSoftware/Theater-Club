@@ -29,8 +29,8 @@ body {
   align-items: center;
 }
 .header__logo {
-  height: 90%;
-  width: auto;
+  height: auto;
+  width: 6%;
 }
 .header__list {
   list-style: none;
@@ -38,6 +38,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   width: 35%;
+  align-items: center;
 }
 .header__list-link {
   color: #222;
