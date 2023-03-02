@@ -1,27 +1,38 @@
 .header {
+  position: sticky;
   width: 100%;
   height: 10rem;
-  padding-inline: 4rem;
+  padding-inline: 2rem;
   background-color: map-get($colours, light);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 
+<<<<<<< HEAD
   &__logo{
     height: auto;
     width: 6%;
+=======
+  &__logo {
+    height: 90%;
+    width: auto;
+>>>>>>> main
   }
 
-  &__list{
+  &__list {
     list-style: none;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+<<<<<<< HEAD
     width: 35%;
     align-items: center;
+=======
+    gap: min(6rem, 6vmax);
+>>>>>>> main
 
-    &-link{
+    &-link {
       color: map-get($colours, dark);
       text-decoration: none;
       font-size: map-get($font-sizes, l);
