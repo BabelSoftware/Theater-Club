@@ -14,8 +14,28 @@
 
     &-link {
       color: map-get($colours, dark);
-      font-size: map-get($font-sizes, base);
       text-decoration: none;
+      font-size: map-get($font-sizes, base);
+      font-weight: map-get($font-weights, regular);
+    }
+  }
+
+  &__end {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: row;
+
+    &-list {
+      height: inherit;
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      gap: min(2rem, 2vmax);
+
+      &__item::marker {
+        display: none;
+      }
     }
   }
 }
