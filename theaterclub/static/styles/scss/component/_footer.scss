@@ -1,0 +1,21 @@
+.footer {
+  height: 7rem;
+  width: 100%;
+  background-color: map-get($colours, light);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 2rem;
+
+  &__start {
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    &-link {
+      color: map-get($colours, dark);
+      font-size: map-get($font-sizes, base);
+      text-decoration: none;
+    }
+  }
+}

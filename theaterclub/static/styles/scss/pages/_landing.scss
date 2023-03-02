@@ -1,0 +1,9 @@
+.section-hero {
+  background-image: linear-gradient(
+    to right bottom,
+    map-get($colours, primary-light),
+    map-get($colours, primary)
+  );
+  width: 100%;
+  height: calc(100vh - 10rem);
+}
