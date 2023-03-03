@@ -93,4 +93,28 @@ body {
   background-image: linear-gradient(to right bottom, #549eff, #075192);
   width: 100%;
   height: calc(100vh - 8rem);
+  padding-inline: 20rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-hero__logo {
+  width: 25%;
+  height: auto;
+}
+.section-hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fafafa;
+  width: 40%;
+}
+.section-hero__container-heading {
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+.section-hero__container-text {
+  font-size: 1.8rem;
+  font-weight: 400;
 }

@@ -6,4 +6,34 @@
   );
   width: 100%;
   height: calc(100vh - 8rem);
+  padding-inline: 20rem;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+
+  &__logo {
+    width: 25%;
+    height: auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: map-get($colours, light);
+    width: 40%;
+
+    &-heading {
+      font-size: map-get($font-sizes, xxxxl);
+      font-weight: map-get($font-weights, bold);
+    }
+
+    &-text {
+      font-size: map-get($font-sizes, m);
+      font-weight: map-get($font-weights, regular);
+    }
+  }
 }
+
+.section-about{}
