@@ -118,3 +118,8 @@ body {
   font-size: 1.8rem;
   font-weight: 400;
 }
+
+.section-about {
+  width: 100%;
+  height: calc(100vh - 8rem);
+}
