@@ -122,6 +122,29 @@ body {
 
 .section-about {
   width: 100%;
-  height: calc(100vh - 8rem);
+  height: calc(100vh - 7rem);
+  padding-block: 8rem;
   background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: min(2rem, 2vmax);
+}
+.section-about__heading {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #222;
+}
+.section-about__text {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #222;
+  padding-inline: 30rem;
+}
+.section-about__link {
+  color: #075192;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
 }
