@@ -39,4 +39,5 @@
 .section-about{
   width: 100%;
   height: calc(100vh - 8rem);
+  background-color: map-get($colours, light);
 }

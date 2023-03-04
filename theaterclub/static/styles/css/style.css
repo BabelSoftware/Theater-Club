@@ -60,6 +60,7 @@ body {
   flex-direction: row;
   justify-content: space-between;
   padding-inline: 2rem;
+  box-shadow: 0 0 1rem 0 #d9d9d9;
 }
 .footer__start {
   display: flex;
@@ -122,4 +123,5 @@ body {
 .section-about {
   width: 100%;
   height: calc(100vh - 8rem);
+  background-color: #fafafa;
 }

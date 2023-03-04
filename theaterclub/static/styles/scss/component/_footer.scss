@@ -6,6 +6,7 @@
   flex-direction: row;
   justify-content: space-between;
   padding-inline: 2rem;
+  box-shadow: 0 0 1rem 0 map-get($colours, grey-light-2);
 
   &__start {
     display: flex;
