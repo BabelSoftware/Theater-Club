@@ -1,4 +1,21 @@
-{% extends 'base.html' %} 
-{% block main %}
-
+{% extends 'base.html' %} {% block main %}
+<section class="section-application">
+  <form class="application-form" action="application.html">
+    <input class="application-form__input" type="text" placeholder="İsim" />
+    <input class="application-form__input" type="text" placeholder="Soyisim" />
+    <input class="application-form__input" type="text" placeholder="Okul" />
+    <input
+      class="application-form__input"
+      type="email"
+      placeholder="Elektronik posta"
+    />
+    <input
+      class="application-form__input"
+      type="file"
+      accept=".pdf, .doc,"
+      multiple
+    />
+    <input class="application-form__input submit-btn" type="submit" />
+  </form>
+</section>
 {% endblock main %}

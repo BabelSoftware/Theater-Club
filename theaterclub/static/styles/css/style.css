@@ -4,6 +4,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 html {
@@ -37,6 +38,7 @@ svg {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 0 0 1rem 0 #d9d9d9;
 }
 .header__logo {
   height: 90%;
@@ -175,4 +177,36 @@ svg {
 .section-about__link:hover {
   color: #12436f;
   transition: all 0.3s ease-in-out;
+}
+
+.section-application {
+  width: 100%;
+  height: calc(100vh - 14rem);
+  background-image: linear-gradient(to right bottom, #549eff, #075192);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: min(2rem, 2vmax);
+}
+
+.application-form {
+  display: grid;
+  grid-template-rows: repeat(5, 1.5fr) 2fr;
+  row-gap: 2rem;
+  background-color: #e3e3e3;
+  border-radius: 1rem;
+  padding-block: 3rem;
+  padding-inline: 4rem;
+}
+.application-form__input {
+  border-radius: 1rem;
+  background-color: #fafafa;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  box-shadow: 0 0 1rem 0 #d9d9d9;
+}
+
+.submit-btn {
+  background-color: #5cb85c;
 }

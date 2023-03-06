@@ -22,7 +22,7 @@
       transition: all 0.3s ease-in-out;
     }
 
-    &-link:hover{
+    &-link:hover {
       color: map-get($colours, primary);
     }
   }
