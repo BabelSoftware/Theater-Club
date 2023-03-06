@@ -1,7 +1,7 @@
 .header {
   position: sticky;
   width: 100%;
-  height: 8rem;
+  height: 7rem;
   padding-inline: 2rem;
   background-color: map-get($colours, light);
   display: flex;
@@ -19,13 +19,21 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
     gap: min(6rem, 6vmax);
 
     &-link {
       color: map-get($colours, dark);
       text-decoration: none;
-      font-size: map-get($font-sizes, l);
+      font-size: map-get($font-sizes, m);
       font-weight: map-get($font-weights, regular);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &-link:hover {
+      color: map-get($colours, primary);
+      // font-size: map-get($font-sizes, l);
     }
   }
 }

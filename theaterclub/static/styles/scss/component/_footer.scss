@@ -12,12 +12,18 @@
     display: flex;
     align-items: center;
     text-align: center;
+    gap: 3rem;
 
     &-link {
       color: map-get($colours, dark);
       text-decoration: none;
       font-size: map-get($font-sizes, base);
       font-weight: map-get($font-weights, regular);
+      transition: all 0.3s ease-in-out;
+    }
+
+    &-link:hover{
+      color: map-get($colours, primary);
     }
   }
 
@@ -34,8 +40,15 @@
       flex-direction: row;
       gap: min(2rem, 2vmax);
 
-      &__item::marker {
-        display: none;
+      &__link {
+        color: map-get($colours, dark);
+        text-decoration: none;
+        font-size: map-get($font-sizes, xxl);
+        transition: all 0.3s ease-in-out;
+      }
+
+      &__link:hover {
+        color: map-get($colours, primary);
       }
     }
   }

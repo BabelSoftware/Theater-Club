@@ -1,15 +1,17 @@
 .section-hero {
   background-image: linear-gradient(
-    to right bottom,
-    map-get($colours, primary-light),
-    map-get($colours, primary)
-  );
+      to right bottom,
+      rgba(map-get($colours, primary-light), 0.9),
+      rgba(map-get($colours, primary), 0.9)
+    ),
+    url("../../components/section-hero-bg.webp");
+  background-position: center;
+  background-size: cover;
   width: 100%;
-  height: calc(100vh - 8rem);
-  padding-inline: 20rem;
+  height: calc(100vh - 7rem);
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 
   &__logo {
@@ -25,18 +27,20 @@
     width: 40%;
 
     &-heading {
-      font-size: map-get($font-sizes, xxxxl);
-      font-weight: map-get($font-weights, bold);
+      font-size: map-get($font-sizes, heading);
+      font-weight: map-get($font-weights, regular);
     }
 
     &-text {
+      color: map-get($colours, grey-light-2);
       font-size: map-get($font-sizes, m);
       font-weight: map-get($font-weights, regular);
+      font-style: italic;
     }
   }
 }
 
-.section-about{
+.section-about {
   width: 100%;
   height: calc(100vh - 7rem);
   padding-block: 15rem;
@@ -46,13 +50,13 @@
   align-items: center;
   gap: min(2rem, 2vmax);
 
-  &__heading{
+  &__heading {
     font-size: map-get($font-sizes, xxxxl);
     font-weight: map-get($font-weights, bold);
     color: map-get($colours, dark);
   }
 
-  &__text{
+  &__text {
     font-size: map-get($font-sizes, l);
     font-weight: map-get($font-weights, regular);
     color: map-get($colours, dark);
@@ -60,10 +64,15 @@
     line-height: 1.6;
   }
 
-  &__link{
+  &__link {
     color: map-get($colours, primary);
     text-decoration: none;
     font-size: map-get($font-sizes, l);
     font-weight: map-get($font-weights, regular);
+  }
+
+  &__link:hover {
+    color: map-get($colours, primary-dark);
+    transition: all 0.3s ease-in-out;
   }
 }

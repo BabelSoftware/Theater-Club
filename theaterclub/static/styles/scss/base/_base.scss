@@ -18,7 +18,11 @@ body {
   font-family: "Roboto";
 }
 
-.icon {
-  width: map-get($font-sizes, xxl);
-  height: map-get($font-sizes, xxl);
+svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
 }
