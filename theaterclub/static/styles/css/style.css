@@ -123,11 +123,10 @@ body {
 .section-about {
   width: 100%;
   height: calc(100vh - 7rem);
-  padding-block: 8rem;
+  padding-block: 15rem;
   background-color: #fafafa;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: min(2rem, 2vmax);
 }
@@ -141,6 +140,7 @@ body {
   font-weight: 400;
   color: #222;
   padding-inline: 30rem;
+  line-height: 1.6;
 }
 .section-about__link {
   color: #075192;

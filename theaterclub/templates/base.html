@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -6,21 +8,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gelecek Kalemler &ndash; SSAL</title>
-    <link rel="icon" type="image/x-icon" href="./components/tiyatro-logo.ico" />
-    <link rel="stylesheet" href="./styles/css/style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="{% static 'components/tiyatro-logo.ico' %}"
+    />
+    <link rel="stylesheet" href="{% static 'styles/css/style.css' %}" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <script src="./script/main.js" defer></script>
+    <script src="{% static 'script/main.js' %}" defer></script>
   </head>
   <body>
     <header class="header">
       <img
         class="header__logo"
-        src="./components/tiyatro-logo.webp"
+        src="{% static 'components/tiyatro-logo.webp' %}"
         alt="Gelecek Kalemler"
       />
       <ul class="header__list">
@@ -35,37 +41,11 @@
         </li>
       </ul>
     </header>
-    <section class="section-hero">
-      <img
-        class="section-hero__logo"
-        src="./components/tiyatro-logo.webp"
-        alt="Gelecek Kalemler Logo"
-      />
-      <div class="section-hero__container">
-        <h1 class="section-hero__container-heading">Gelecek Kalemler</h1>
-        <p class="section-hero__container-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, nisi
-          et quia fuga voluptatum tenetur!
-        </p>
-      </div>
-    </section>
-    <section class="section-about" id="about">
-      <h2 class="section-about__heading">Hakkımızda</h2>
-      <p class="section-about__text">
-        Biz, Sakıp Sabancı Anadolu Lisesi İngilizce ve Türkçe Tiyatro kulüpleri
-        olarak Gençler arasında hayatın provası olan tiyatro sanatını
-        yaygınlaştırmak, bu alanda ilgili olan akranlarımızla tanışmak,
-        kaynaşmak ve bir bilinç oluşturmak ve yetenekli arkadaşlarımıza imkan
-        sağlayarak bu konuda teşvik etmek üzere ilk planda dergi ve yarışma ile
-        başlayacak bir tiyatro hareketi düzenlemeyi ve sanata, özellikle
-        tiyatroya, elimizden gelen destek ile geliştirmeyi hayal eden sanatçı
-        gençlerin.
-      </p>
-      <a href="" class="section-about__link">Başvurmak için tıklayın ></a>
-    </section>
+    <main>{% block main %} {% endblock main %}</main>
     <footer class="footer">
       <div class="footer__start">
         <a href="#" class="footer__start-link">Aydınlatma Metni</a>
+        <a href="#" class="footer__start-link">Gizlilik Politikası</a>
       </div>
       <div class="footer__end">
         <ul class="footer__end-list">
@@ -73,7 +53,7 @@
             <a href="" class="footer__end-list__link">
               <svg class="icon icon-mail">
                 <use
-                  xlink:href="./components/symbol-defs.svg#icon-envelop"
+                  xlink:href="{% static 'components/symbol-defs.svg' %}#icon-envelop"
                 ></use>
               </svg>
             </a>
@@ -82,7 +62,7 @@
             <a href="" class="footer__end-list__link">
               <svg class="icon icon-mail">
                 <use
-                  xlink:href="./components/symbol-defs.svg#icon-instagram"
+                  xlink:href="{% static 'components/symbol-defs.svg' %}#icon-instagram"
                 ></use>
               </svg>
             </a>
@@ -90,7 +70,9 @@
           <li class="footer__end-list__item">
             <a href="" class="footer__end-list__link">
               <svg class="icon icon-mail">
-                <use xlink:href="./components/symbol-defs.svg#icon-phone"></use>
+                <use
+                  xlink:href="{% static 'components/symbol-defs.svg' %}#icon-phone"
+                ></use>
               </svg>
             </a>
           </li>

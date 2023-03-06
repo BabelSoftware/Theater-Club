@@ -39,11 +39,10 @@
 .section-about{
   width: 100%;
   height: calc(100vh - 7rem);
-  padding-block: 8rem;
+  padding-block: 15rem;
   background-color: map-get($colours, light);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: min(2rem, 2vmax);
 
@@ -58,6 +57,7 @@
     font-weight: map-get($font-weights, regular);
     color: map-get($colours, dark);
     padding-inline: 30rem;
+    line-height: 1.6;
   }
 
   &__link{
