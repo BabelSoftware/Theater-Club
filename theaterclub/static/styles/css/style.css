@@ -48,6 +48,9 @@ input {
   height: 90%;
   width: auto;
 }
+.header__logo-link {
+  height: inherit;
+}
 .header__list {
   list-style: none;
   display: flex;
@@ -231,4 +234,11 @@ input {
 .input-container {
   background: transparent;
   box-shadow: none;
+}
+
+.section-clubs {
+  width: 100%;
+  height: calc(100vh - 14rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

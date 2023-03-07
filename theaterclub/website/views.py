@@ -6,3 +6,6 @@ def index(request):
 
 def application(request):
   return render(request, 'application.html')
+
+def clubs(request):
+  return render(request, 'clubs.html')

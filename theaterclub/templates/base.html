@@ -24,11 +24,12 @@
   </head>
   <body>
     <header class="header">
-      <img
-        class="header__logo"
-        src="{% static 'components/tiyatro-logo.webp' %}"
-        alt="Gelecek Kalemler"
-      />
+      <a href="" class="header__logo-link">
+        <img
+          class="header__logo"
+          src="{% static 'components/tiyatro-logo.webp' %}"
+          alt="Gelecek Kalemler"
+      /></a>
       <ul class="header__list">
         <li class="header__list-item">
           <a href="{% url 'index' %}#about" class="header__list-link"
@@ -41,7 +42,9 @@
           >
         </li>
         <li class="header__list-item">
-          <a href="#" class="header__list-link">Kulüplerimiz</a>
+          <a href="{% url 'clubs-page' %}" class="header__list-link"
+            >Kulüplerimiz</a
+          >
         </li>
       </ul>
     </header>

@@ -13,6 +13,10 @@
   &__logo {
     height: 90%;
     width: auto;
+
+    &-link {
+      height: inherit;
+    }
   }
 
   &__list {
