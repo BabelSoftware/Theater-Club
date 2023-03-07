@@ -6,7 +6,33 @@
 }
 
 .turkish-container {
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__heading {
+    font-size: map-get($font-sizes, heading);
+    font-weight: map-get($font-weights, medium);
+  }
 }
 
 .english-container {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__heading {
+    font-size: map-get($font-sizes, heading);
+    font-weight: map-get($font-weights, medium);
+  }
+
+  &__text{
+    font-size: map-get($font-sizes, dense);
+  }
 }

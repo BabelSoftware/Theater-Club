@@ -242,3 +242,29 @@ input {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.turkish-container {
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.turkish-container__heading {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.english-container {
+  background-color: red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.english-container__heading {
+  font-size: 6rem;
+  font-weight: 500;
+}

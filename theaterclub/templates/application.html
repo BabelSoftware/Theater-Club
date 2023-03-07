@@ -19,11 +19,20 @@
     <div class="application-form__input input-container">
       <input type="checkbox" id="checkbox-input" />
       <label for="checkbox-input"
-        ><a href="#" class="application-form__input-link">Yarışma Şartnamesi</a
+        ><a
+          href="{% static 'components/gelecek_kalemler_sartnamesi.pdf' %}"
+          class="application-form__input-link"
+          >Yarışma Şartnamesi</a
         >'ni,
-        <a href="#" class="application-form__input-link">Aydınlatma Metni</a>'ni
-        ve
-        <a href="#" class="application-form__input-link">Gizlilik Politikası</a
+        <a
+          href="{% static 'components/aydinlatma_metni.pdf' %}"
+          class="application-form__input-link"
+          >Aydınlatma Metni</a
+        >'ni ve
+        <a
+          href="{% static 'components/gizlilik_politikasi' %}"
+          class="application-form__input-link"
+          >Gizlilik Politikası</a
         >'nı okudum. Kabul ediyorum.</label
       >
     </div>

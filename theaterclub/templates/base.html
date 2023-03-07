@@ -24,7 +24,7 @@
   </head>
   <body>
     <header class="header">
-      <a href="" class="header__logo-link">
+      <a href="{% url 'index' %}" class="header__logo-link">
         <img
           class="header__logo"
           src="{% static 'components/tiyatro-logo.webp' %}"
@@ -51,13 +51,26 @@
     <main>{% block main %} {% endblock main %}</main>
     <footer class="footer">
       <div class="footer__start">
-        <a href="#" class="footer__start-link">Aydınlatma Metni</a>
-        <a href="#" class="footer__start-link">Gizlilik Politikası</a>
+        <a
+          href="{% static 'components/aydinlatma_metni.pdf' %}"
+          class="footer__start-link"
+          target="_blank"
+          >Aydınlatma Metni</a
+        >
+        <a
+          href="{% static 'components/gelecek_kalemler_sartnamesi.pdf' %}"
+          target="_blank"
+          class="footer__start-link"
+          >Gizlilik Politikası</a
+        >
       </div>
       <div class="footer__end">
         <ul class="footer__end-list">
           <li class="footer__end-list__item">
-            <a href="" class="footer__end-list__link">
+            <a
+              href="mailto:gelecekkalemlerkomitesi@gmail.com"
+              class="footer__end-list__link"
+            >
               <svg class="icon icon-mail footer__end-list__link">
                 <use
                   xlink:href="{% static 'components/symbol-defs.svg' %}#icon-envelop"
