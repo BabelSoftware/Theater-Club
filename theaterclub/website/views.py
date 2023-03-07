@@ -22,15 +22,21 @@ class ApplicationView(View):
         if policies_accepted == False:
           return render(request, 'application.html', {'error': 'You must accept the policies to submit the application.'})
       
-        first_name: str = request.POST.get('first_name', ''), 
-        last_name: str = request.POST.get('last_name', ''),
-        school: str = request.POST.get('school', ''),
-        email: str = request.POST.get('email', ''),
+        first_name: str = request.POST['first-name'] 
+        last_name: str = request.POST['last-name']
+        school: str = request.POST['school']
+        email: str = request.POST['email']
         # TODO: File input will be implemented.
+
+        if not first_name or not last_name or not school or not email: 
+          return render(request, 'application.html', {'error': 'An error occured while getting the form data.'})
 
         application: Application = Application.objects.create(full_name = f'{first_name} {last_name}', email = email, school = school)
         
         if application is None:
           return render(request, 'application.html', {'error': 'An error occurred while submitting the application.'})
-        
+      
+        application.save()
+        print('An application created succesfully.')
+
         return render(request, 'application.html', {'success': 'Application submitted successfully.'})
