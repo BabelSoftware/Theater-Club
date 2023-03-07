@@ -17,7 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script src="{% static 'script/main.js' %}" defer></script>
@@ -31,10 +31,14 @@
       />
       <ul class="header__list">
         <li class="header__list-item">
-          <a href="#about" class="header__list-link">Hakkımızda</a>
+          <a href="{% url 'index' %}#about" class="header__list-link"
+            >Hakkımızda</a
+          >
         </li>
         <li class="header__list-item">
-          <a href="#" class="header__list-link">Başvuru</a>
+          <a href="{% url 'application-page' %}" class="header__list-link"
+            >Başvuru</a
+          >
         </li>
         <li class="header__list-item">
           <a href="#" class="header__list-link">Kulüplerimiz</a>

@@ -14,13 +14,20 @@
 }
 
 .application-form {
+  width: clamp(25vmax, 60rem, 40vw);
   display: grid;
-  grid-template-rows: repeat(5, 1.5fr) 2fr;
+  grid-template-rows: 2fr repeat(5, 1.5fr) 2fr;
   row-gap: 2rem;
   background-color: #e3e3e3;
   border-radius: 1rem;
   padding-block: 3rem;
   padding-inline: 4rem;
+
+  &__heading {
+    text-align: center;
+    color: map-get($colours, dark);
+    font-size: map-get($font-sizes, xl);
+  }
 
   &__input {
     border-radius: 1rem;
@@ -28,9 +35,22 @@
     padding-block: 1rem;
     padding-inline: 1.5rem;
     box-shadow: 0 0 1rem 0 map-get($colours, grey-light-2);
+
+    &-link{
+      color: map-get($colours, dark);
+    }
   }
 }
 
 .submit-btn {
   background-color: map-get($colours, success);
+  color: map-get($colours, light);
+  font-size: map-get($font-sizes, xl);
+  letter-spacing: 0.2rem;
+  font-weight: map-get($font-weights, dense);
+}
+
+.input-container{
+  background: transparent;
+  box-shadow: none;
 }

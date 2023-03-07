@@ -1,6 +1,7 @@
 {% extends 'base.html' %} {% block main %}
 <section class="section-application">
-  <form class="application-form" action="application.html">
+  <form class="application-form" action="application">
+    <h2 class="application-form__heading">Başvuru Formu</h2>
     <input class="application-form__input" type="text" placeholder="İsim" />
     <input class="application-form__input" type="text" placeholder="Soyisim" />
     <input class="application-form__input" type="text" placeholder="Okul" />
@@ -12,10 +13,23 @@
     <input
       class="application-form__input"
       type="file"
-      accept=".pdf, .doc,"
+      accept=".pdf, .doc, .docx"
       multiple
     />
-    <input class="application-form__input submit-btn" type="submit" />
+    <div class="application-form__input input-container">
+      <input type="checkbox" id="checkbox-input" />
+      <label for="checkbox-input"
+        ><a href="#" class="application-form__input-link">Yarışma Şartnamesi</a
+        >'ni,
+        <a href="#" class="application-form__input-link">Aydınlatma Metni</a>'ni
+        ve
+        <a href="#" class="application-form__input-link">Gizlilik Politikası</a
+        >'nı okudum. Kabul ediyorum.</label
+      >
+    </div>
+    <button class="application-form__input submit-btn" type="submit">
+      Gönder
+    </button>
   </form>
 </section>
 {% endblock main %}
