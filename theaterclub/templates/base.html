@@ -28,11 +28,9 @@
   </head>
   <body>
     <header class="header">
-      <img
-        class="header__logo"
-        src="{% static 'components/tiyatro-logo.webp' %}"
-        alt="Gelecek Kalemler"
-      />
+
+      <img class="header__logo" srcset="{% static 'components/tiyatro-logo-1x.webp' %} 1x, {% static 'components/tiyatro-logo-2x.webp' %} 2x, , {% static 'components/tiyatro-logo-3x.webp' %} 3x" alt="Gelecek Kalemler | Logo">
+
       <ul class="header__list">
         <li class="header__list-item">
           <a href="{% url 'index' %}#about" class="header__list-link"
