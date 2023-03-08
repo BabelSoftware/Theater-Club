@@ -9,13 +9,8 @@ from application.models import Application
 def index(request):
   return render(request, 'index.html')
 
-<<<<<<< HEAD
-def application(request):
-  return render(request, 'application.html')
-
 def clubs(request):
   return render(request, 'clubs.html')
-=======
 class ApplicationView(View):
     model = Application
     template_name = 'application.html'
@@ -42,14 +37,9 @@ class ApplicationView(View):
         
         if application is None:
           return render(request, 'application.html', {'error': 'An error occurred while submitting the application.'})
-<<<<<<< HEAD
         
-        return render(request, 'application.html', {'success': 'Application submitted successfully.'})
->>>>>>> main
-=======
       
         application.save()
         print('An application created succesfully.')
 
         return render(request, 'application.html', {'success': 'Application submitted successfully.'})
->>>>>>> main

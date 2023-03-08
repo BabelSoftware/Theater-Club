@@ -1,4 +1,4 @@
-{% extends 'base.html' %} {% block main %}
+{% extends 'base.html' %} {% load static %} {% block main %}
 <section class="section-application">
   <form class="application-form" action="/application" method="POST">
     {% csrf_token %}
@@ -21,7 +21,8 @@
       class="application-form__input"
       type="text"
       placeholder="Okul"
-      name="school"      required
+      name="school"
+      required
     />
     <input
       class="application-form__input"
@@ -57,7 +58,7 @@
           >Aydınlatma Metni</a
         >'ni ve
         <a
-          href="{% static 'components/gizlilik_politikasi' %}"
+          href="{% static 'components/gizlilik_politikası.pdf' %}"
           class="application-form__input-link"
           >Gizlilik Politikası</a
         >'nı okudum. Kabul ediyorum.</label
