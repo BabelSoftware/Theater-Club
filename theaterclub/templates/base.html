@@ -1,35 +1,45 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
-
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gelecek Kalemler &ndash; SSAL</title>
+    
+    <meta name="description" content="Gelecek Kalemler, Sakıp Sabancı Anadolu Lisesi Tiyatro Kulüpleri tarafından kurulmuş bir yarışmadır.">
+    <meta name="keywords" content="Gelecek Kalemler, Gelecek, Kalemler, Tiyatro, İngilizce Tiyato, Türkçe Tiyatro, Yazarlık, Edebiyat, Literatür, Sakıp Sabancı Anadolu Lisesi, SSAL, Beşiktaş Sakıp Sabancı Anadolu Lisesi, BSSAL">
+    <meta name="theme-color" content="#075192">
+
+    <link rel="canonical" href="/"> 
+
     <link
       rel="icon"
       type="image/x-icon"
       href="{% static 'components/tiyatro-logo.ico' %}"
     />
+
+    <link rel="stylesheet" href="{% static 'fonts/fonts.css' %}">
     <link rel="stylesheet" href="{% static 'styles/css/style.css' %}" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
+
     <script src="{% static 'script/main.js' %}" defer></script>
+
+    <title>Gelecek Kalemler &ndash; SSAL</title>
   </head>
   <body>
     <header class="header">
+<<<<<<< HEAD
       <a href="{% url 'index' %}" class="header__logo-link">
         <img
           class="header__logo"
           src="{% static 'components/tiyatro-logo.webp' %}"
           alt="Gelecek Kalemler"
       /></a>
+=======
+
+      <img class="header__logo" srcset="{% static 'components/tiyatro-logo-1x.webp' %} 1x, {% static 'components/tiyatro-logo-2x.webp' %} 2x, , {% static 'components/tiyatro-logo-3x.webp' %} 3x" alt="Gelecek Kalemler | Logo">
+
+>>>>>>> main
       <ul class="header__list">
         <li class="header__list-item">
           <a href="{% url 'index' %}#about" class="header__list-link"
