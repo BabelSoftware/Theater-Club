@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import os
+import whitenoise
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -20,17 +22,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-)1$^y^lfk%a9w69s$z%@+1fy+u=9-**oeyc^@(=a$#s474s)rg'
+with open(os.path.join(BASE_DIR, 'secret_key.txt')) as f:
+    SECRET_KEY = f.read().strip()
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['www.gelecekkalemler.com', 'gelecekkalemler.com', '37.59.221.232']
 
 
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -43,6 +47,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -118,10 +123,43 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = 'staticfiles/'
-STATICFILES_DIRS = ['static']
+MEDIA_URL = 'media/'
+STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
+
+CSRF_TRUSTED_ORIGINS = ["https://gelecekkalemler.com", "https://www.gelecekkalemler.com", "http://37.59.221.232"]
+
+# EMAIL SETTINGS 
+
+# SITE ID 
+
+SITE_ID = 1
+# SESSION_COOKIE_AGE = 525948 * 60 * 10
+
+# # # HTTPS SETTINGS
+
+# SESSION_COOKIE_SECURE = True
+# CSRF_COOKIE_SECURE = True
+# SECURE_SSL_REDIRECT = False
+# SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+
+# #  HSTS SETTINGS 
+
+# SECURE_HSTS_SECONDS = 3153600 # 1 year 
+# SECURE_HSTS_PRELOAD = True 
+# SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+
+# # USER PRIVACY
+
+SECURE_REFERRER_POLICY = 'strict-origin'
+
+# # XSS FILTER
+
+SECURE_BROWSER_XSS_FILTER = True
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 

@@ -6,12 +6,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <meta name="description" content="Gelecek Kalemler, Sakıp Sabancı Anadolu Lisesi Tiyatro Kulüpleri tarafından kurulmuş bir yarışmadır.">
-    <meta name="keywords" content="Gelecek Kalemler, Gelecek, Kalemler, Tiyatro, İngilizce Tiyato, Türkçe Tiyatro, Yazarlık, Edebiyat, Literatür, Sakıp Sabancı Anadolu Lisesi, SSAL, Beşiktaş Sakıp Sabancı Anadolu Lisesi, BSSAL">
-    <meta name="theme-color" content="#075192">
 
-    <link rel="canonical" href="/"> 
+    <meta
+      name="description"
+      content="Gelecek Kalemler, Sakıp Sabancı Anadolu Lisesi Tiyatro Kulüpleri tarafından kurulmuş bir yarışmadır."
+    />
+    <meta
+      name="keywords"
+      content="Gelecek Kalemler, Gelecek, Kalemler, Tiyatro, İngilizce Tiyato, Türkçe Tiyatro, Yazarlık, Edebiyat, Literatür, Sakıp Sabancı Anadolu Lisesi, SSAL, Beşiktaş Sakıp Sabancı Anadolu Lisesi, BSSAL, gelecekkalemler, gelecekalemler"
+    />
+    <meta name="theme-color" content="#075192" />
+
+    <link rel="canonical" href="/" />
 
     <link
       rel="icon"
@@ -19,7 +25,7 @@
       href="{% static 'components/tiyatro-logo.ico' %}"
     />
 
-    <link rel="stylesheet" href="{% static 'fonts/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/fonts.css' %}" />
     <link rel="stylesheet" href="{% static 'styles/css/style.css' %}" />
 
     <script src="{% static 'script/main.js' %}" defer></script>
@@ -28,8 +34,12 @@
   </head>
   <body>
     <header class="header">
-
-      <img class="header__logo" srcset="{% static 'components/tiyatro-logo-1x.webp' %} 1x, {% static 'components/tiyatro-logo-2x.webp' %} 2x, , {% static 'components/tiyatro-logo-3x.webp' %} 3x" alt="Gelecek Kalemler | Logo">
+      <a class="header__logo" href="{% url 'index' %}">
+        <img
+          class="header__logo-img"
+          srcset="{% static 'components/tiyatro-logo-1x.webp' %} 1x, {% static 'components/tiyatro-logo-2x.webp' %} 2x, , {% static 'components/tiyatro-logo-3x.webp' %} 3x"
+          alt="Gelecek Kalemler | Logo"
+      /></a>
 
       <ul class="header__list">
         <li class="header__list-item">
@@ -59,10 +69,16 @@
           >Aydınlatma Metni</a
         >
         <a
-          href="{% static 'components/gelecek_kalemler_sartnamesi.pdf' %}"
+          href="{% static 'components/gizlilik_politikasi.pdf' %}"
           target="_blank"
           class="footer__start-link"
           >Gizlilik Politikası</a
+        >
+        <a
+          href="{% static 'components/gelecek_kalemler_sartnamesi.pdf' %}"
+          class="footer__start-link"
+          target="_blank"
+          >Şartname</a
         >
       </div>
       <div class="footer__end">
@@ -80,7 +96,11 @@
             </a>
           </li>
           <li class="footer__end-list__item">
-            <a href="" class="footer__end-list__link">
+            <a
+              href="https://www.instagram.com/gelecekkalemler/"
+              class="footer__end-list__link"
+              target="_blank"
+            >
               <svg class="icon icon-mail footer__end-list__link">
                 <use
                   xlink:href="{% static 'components/symbol-defs.svg' %}#icon-instagram"
@@ -89,7 +109,7 @@
             </a>
           </li>
           <li class="footer__end-list__item">
-            <a href="" class="footer__end-list__link">
+            <a href="tel:+90 212 227 46 10" class="footer__end-list__link">
               <svg class="icon icon-mail footer__end-list__link">
                 <use
                   class="footer__end-list__link"

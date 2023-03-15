@@ -1,0 +1,327 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  min-height: 100vh;
+  font-family: "Roboto";
+}
+
+svg {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+input {
+  outline: none;
+}
+
+.header {
+  position: sticky;
+  width: 100%;
+  height: 7rem;
+  padding-inline: 2rem;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0 1rem 0 #d9d9d9;
+}
+.header__logo {
+  height: 90%;
+  width: auto;
+}
+.header__logo-link {
+  height: inherit;
+}
+.header__list {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 1rem;
+  gap: min(6rem, 6vmax);
+}
+.header__list-link {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+.header__list-link:hover {
+  color: #075192;
+}
+
+.footer {
+  height: 7rem;
+  width: 100%;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-inline: 2rem;
+  box-shadow: 0 0 1rem 0 #d9d9d9;
+}
+.footer__start {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: 3rem;
+}
+.footer__start-link {
+  color: #222;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  transition: all 0.3s ease-in-out;
+}
+.footer__start-link:hover {
+  color: #075192;
+}
+.footer__end {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  flex-direction: row;
+}
+.footer__end-list {
+  height: inherit;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: min(2rem, 2vmax);
+}
+.footer__end-list__link {
+  color: #222;
+  text-decoration: none;
+  font-size: 2.8rem;
+  transition: all 0.3s ease-in-out;
+}
+.footer__end-list__link:hover {
+  color: #075192;
+}
+
+.section-hero {
+  background-image: linear-gradient(to right bottom, rgba(84, 158, 255, 0.9), rgba(7, 81, 146, 0.9)), url("../../components/section-hero-bg.webp");
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 7rem);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.section-hero__logo {
+  width: 25%;
+  height: auto;
+}
+.section-hero__container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: #fafafa;
+  width: 40%;
+}
+.section-hero__container-heading {
+  font-size: 6rem;
+  font-weight: 400;
+}
+.section-hero__container-text {
+  color: #d9d9d9;
+  font-size: 1.8rem;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.section-about {
+  width: 100%;
+  height: calc(100vh - 7rem);
+  padding-block: 15rem;
+  background-color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(2rem, 2vmax);
+}
+.section-about__heading {
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #222;
+}
+.section-about__text {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #222;
+  padding-inline: 30rem;
+  line-height: 1.6;
+}
+.section-about__link {
+  color: #075192;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 400;
+}
+.section-about__link:hover {
+  color: #12436f;
+  transition: all 0.3s ease-in-out;
+}
+
+.section-application {
+  width: 100%;
+  height: calc(100vh - 14rem);
+  background-image: linear-gradient(to right bottom, #549eff, #075192);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: min(2rem, 2vmax);
+}
+
+.application-form {
+  width: clamp(25vmax, 60rem, 40vw);
+  display: grid;
+  grid-template-rows: 2fr repeat(5, 1.5fr) 2fr;
+  row-gap: 2rem;
+  background-color: #e3e3e3;
+  border-radius: 1rem;
+  padding-block: 3rem;
+  padding-inline: 4rem;
+}
+.application-form__heading {
+  text-align: center;
+  color: #222;
+  font-size: 2.4rem;
+}
+.application-form__input {
+  border-radius: 1rem;
+  background-color: #fafafa;
+  padding-block: 1rem;
+  padding-inline: 1.5rem;
+  box-shadow: 0 0 1rem 0 #d9d9d9;
+}
+.application-form__input-link {
+  color: #222;
+}
+
+.submit-btn {
+  background-color: #5cb85c;
+  color: #fafafa;
+  font-size: 2.4rem;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+}
+
+.input-container {
+  background: transparent;
+  box-shadow: none;
+}
+
+.section-clubs {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: calc(100vh - 14rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.turkish-container {
+  position: relative;
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 8rem;
+  padding-block: 8rem;
+  gap: 2rem;
+}
+.turkish-container__bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-image: url(../../components/türkçe.webp);
+  filter: blur(0.4rem);
+  -webkit-filter: blur(0.4rem);
+}
+.turkish-container__heading {
+  font-size: 6rem;
+  font-weight: 500;
+  color: #fafafa;
+}
+.turkish-container__text {
+  font: inherit;
+  position: relative;
+  font-size: 2.4rem;
+  line-height: 1.6;
+  letter-spacing: unset;
+  color: #fafafa;
+}
+.turkish-container__text-ending {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: end;
+  color: #fafafa;
+}
+
+.english-container {
+  position: relative;
+  z-index: 1;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 8rem;
+  gap: 2rem;
+}
+.english-container__bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  filter: blur(0.4rem);
+  -webkit-filter: blur(0.4rem);
+  background-image: url(../../components/ingilizce.webp);
+}
+.english-container__heading {
+  font-size: 6rem;
+  font-weight: 500;
+  color: #fafafa;
+}
+.english-container__text {
+  font-size: 2.4rem;
+  line-height: 1.6;
+  color: #fafafa;
+}
