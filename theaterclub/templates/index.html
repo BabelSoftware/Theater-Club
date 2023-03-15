@@ -1,11 +1,12 @@
-{% extends 'base.html' %} {% block main %}
+{% extends 'base.html' %} {% load static %} {% block main %}
 
 <section class="section-hero">
   <div class="blur"></div>
   <div class="section-hero__container">
     <h1 class="section-hero__container-heading">Gelecek Kalemler</h1>
     <p class="section-hero__container-text">
-      Beşiktaş Sakıp Sabancı Anadolu Lisesi'nden doğan sanat hareketi: Gelecek Kalemler
+      Beşiktaş Sakıp Sabancı Anadolu Lisesi'nden doğan sanat hareketi: Gelecek
+      Kalemler
     </p>
   </div>
 </section>
@@ -20,7 +21,68 @@
     tiyatro hareketi düzenlemeyi ve sanata, özellikle tiyatroya, elimizden gelen
     destek ile geliştirmeyi hayal eden sanatçı gençlerin.
   </p>
-  <a href="{% url 'application-page' %}" class="section-about__link">Başvurmak için tıklayın ></a>
+  <a href="{% url 'application-page' %}" class="section-about__link"
+    >Başvurmak için tıklayın ></a
+  >
+</section>
+<section class="section-announcements" id="announcements">
+  <h2 class="section-announcements__heading">Duyurular</h2>
+  <div class="section-announcements__container">
+    <div class="section-announcements__container-top">
+      <h3 class="section-announcements__container-top__heading">Duyuru - 1</h3>
+      <p class="section-announcements__container-top__date">15.03.2023</p>
+    </div>
+    <div class="section-announcements__container-center">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime libero
+      eos, voluptas sint in enim perspiciatis sapiente, deleniti hic eaque ea
+      molestias mollitia accusamus numquam corrupti amet voluptates magni est
+      veritatis quisquam debitis. Quaerat, dolorem facere. Non enim id
+      cupiditate. Repellat molestias in totam atque excepturi cum minima
+      voluptate! Provident.
+    </div>
+  </div>
+  <div class="section-announcements__container">
+    <div class="section-announcements__container-top">
+      <h3 class="section-announcements__container-top__heading">Duyuru - 2</h3>
+      <p class="section-announcements__container-top__date">15.03.2023</p>
+    </div>
+    <div class="section-announcements__container-center">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime libero
+      eos, voluptas sint in enim perspiciatis sapiente, deleniti hic eaque ea
+      molestias mollitia accusamus numquam corrupti amet voluptates magni est
+      veritatis quisquam debitis. Quaerat, dolorem facere. Non enim id
+      cupiditate. Repellat molestias in totam atque excepturi cum minima
+      voluptate! Provident.
+    </div>
+  </div>
+  <div class="section-announcements__container">
+    <div class="section-announcements__container-top">
+      <h3 class="section-announcements__container-top__heading">Duyuru - 3</h3>
+      <p class="section-announcements__container-top__date">15.03.2023</p>
+    </div>
+    <div class="section-announcements__container-center">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime libero
+      eos, voluptas sint in enim perspiciatis sapiente, deleniti hic eaque ea
+      molestias mollitia accusamus numquam corrupti amet voluptates magni est
+      veritatis quisquam debitis. Quaerat, dolorem facere. Non enim id
+      cupiditate. Repellat molestias in totam atque excepturi cum minima
+      voluptate! Provident.
+    </div>
+  </div>
+  <div class="section-announcements__container">
+    <div class="section-announcements__container-top">
+      <h3 class="section-announcements__container-top__heading">Duyuru - 4</h3>
+      <p class="section-announcements__container-top__date">15.03.2023</p>
+    </div>
+    <div class="section-announcements__container-center">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Maxime libero
+      eos, voluptas sint in enim perspiciatis sapiente, deleniti hic eaque ea
+      molestias mollitia accusamus numquam corrupti amet voluptates magni est
+      veritatis quisquam debitis. Quaerat, dolorem facere. Non enim id
+      cupiditate. Repellat molestias in totam atque excepturi cum minima
+      voluptate! Provident.
+    </div>
+  </div>
 </section>
 
 {% endblock main %}

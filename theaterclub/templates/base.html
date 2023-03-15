@@ -32,19 +32,36 @@
 
     <title>Gelecek Kalemler &ndash; SSAL</title>
   </head>
-  <body>
+  <body id="body">
+    <div class="pop-up" id="popUp" class="closed">
+      <div class="pop-up__container">
+        <div class="pop-up__container-top">
+          <svg class="pop-up__container-top__btn icon" id="popUpBtn">
+            <use
+              xlink:href="{% static 'components/symbol-defs.svg' %}#icon-cross"
+            ></use>
+          </svg>
+        </div>
+      </div>
+    </div>
     <header class="header">
       <a class="header__logo" href="{% url 'index' %}">
         <img
           class="header__logo-img"
           srcset="{% static 'components/tiyatro-logo-1x.webp' %} 1x, {% static 'components/tiyatro-logo-2x.webp' %} 2x, , {% static 'components/tiyatro-logo-3x.webp' %} 3x"
           alt="Gelecek Kalemler | Logo"
-      /></a>
+        />
+      </a>
 
       <ul class="header__list">
         <li class="header__list-item">
           <a href="{% url 'index' %}#about" class="header__list-link"
-            >Hakkımızda</a
+            >Hakkımızda
+          </a>
+        </li>
+        <li class="header__list-item">
+          <a href="{% url 'index' %}#announcements" class="header__list-link"
+            >Duyurular</a
           >
         </li>
         <li class="header__list-item">
@@ -87,6 +104,7 @@
             <a
               href="mailto:gelecekkalemlerkomitesi@gmail.com"
               class="footer__end-list__link"
+              aria-label="Elektronik Posta Adresi"
             >
               <svg class="icon icon-mail footer__end-list__link">
                 <use
@@ -100,6 +118,7 @@
               href="https://www.instagram.com/gelecekkalemler/"
               class="footer__end-list__link"
               target="_blank"
+              aria-label="Instagram Adresi"
             >
               <svg class="icon icon-mail footer__end-list__link">
                 <use
@@ -109,7 +128,11 @@
             </a>
           </li>
           <li class="footer__end-list__item">
-            <a href="tel:+90 212 227 46 10" class="footer__end-list__link">
+            <a
+              href="tel:+90 212 227 46 10"
+              class="footer__end-list__link"
+              aria-label="Telefon Numarası"
+            >
               <svg class="icon icon-mail footer__end-list__link">
                 <use
                   class="footer__end-list__link"
