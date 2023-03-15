@@ -6,12 +6,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <meta name="description" content="Gelecek Kalemler, Sakıp Sabancı Anadolu Lisesi Tiyatro Kulüpleri tarafından kurulmuş bir yarışmadır.">
-    <meta name="keywords" content="Gelecek Kalemler, Gelecek, Kalemler, Tiyatro, İngilizce Tiyato, Türkçe Tiyatro, Yazarlık, Edebiyat, Literatür, Sakıp Sabancı Anadolu Lisesi, SSAL, Beşiktaş Sakıp Sabancı Anadolu Lisesi, BSSAL">
-    <meta name="theme-color" content="#075192">
 
-    <link rel="canonical" href="/"> 
+    <meta
+      name="description"
+      content="Gelecek Kalemler, Sakıp Sabancı Anadolu Lisesi Tiyatro Kulüpleri tarafından kurulmuş bir yarışmadır."
+    />
+    <meta
+      name="keywords"
+      content="Gelecek Kalemler, Gelecek, Kalemler, Tiyatro, İngilizce Tiyato, Türkçe Tiyatro, Yazarlık, Edebiyat, Literatür, Sakıp Sabancı Anadolu Lisesi, SSAL, Beşiktaş Sakıp Sabancı Anadolu Lisesi, BSSAL, gelecekkalemler, gelecekalemler"
+    />
+    <meta name="theme-color" content="#075192" />
+
+    <link rel="canonical" href="/" />
 
     <link
       rel="icon"
@@ -19,22 +25,43 @@
       href="{% static 'components/tiyatro-logo.ico' %}"
     />
 
-    <link rel="stylesheet" href="{% static 'fonts/fonts.css' %}">
+    <link rel="stylesheet" href="{% static 'fonts/fonts.css' %}" />
     <link rel="stylesheet" href="{% static 'styles/css/style.css' %}" />
 
     <script src="{% static 'script/main.js' %}" defer></script>
 
     <title>Gelecek Kalemler &ndash; SSAL</title>
   </head>
-  <body>
+  <body id="body">
+    <div class="pop-up closed" id="popUp">
+      <div class="pop-up__container">
+        <div class="pop-up__container-top">
+          <svg class="pop-up__container-top__btn icon" id="popUpBtn">
+            <use
+              xlink:href="{% static 'components/symbol-defs.svg' %}#icon-cross"
+            ></use>
+          </svg>
+        </div>
+      </div>
+    </div>
     <header class="header">
-
-      <img class="header__logo" srcset="{% static 'components/tiyatro-logo-1x.webp' %} 1x, {% static 'components/tiyatro-logo-2x.webp' %} 2x, , {% static 'components/tiyatro-logo-3x.webp' %} 3x" alt="Gelecek Kalemler | Logo">
+      <a class="header__logo" href="{% url 'index' %}">
+        <img
+          class="header__logo-img"
+          srcset="{% static 'components/tiyatro-logo-1x.webp' %} 1x, {% static 'components/tiyatro-logo-2x.webp' %} 2x, , {% static 'components/tiyatro-logo-3x.webp' %} 3x"
+          alt="Gelecek Kalemler | Logo"
+        />
+      </a>
 
       <ul class="header__list">
         <li class="header__list-item">
           <a href="{% url 'index' %}#about" class="header__list-link"
-            >Hakkımızda</a
+            >Hakkımızda
+          </a>
+        </li>
+        <li class="header__list-item">
+          <a href="{% url 'index' %}#announcements" class="header__list-link"
+            >Duyurular</a
           >
         </li>
         <li class="header__list-item">
@@ -59,10 +86,16 @@
           >Aydınlatma Metni</a
         >
         <a
-          href="{% static 'components/gelecek_kalemler_sartnamesi.pdf' %}"
+          href="{% static 'components/gizlilik_politikasi.pdf' %}"
           target="_blank"
           class="footer__start-link"
           >Gizlilik Politikası</a
+        >
+        <a
+          href="{% static 'components/gelecek_kalemler_sartnamesi.pdf' %}"
+          class="footer__start-link"
+          target="_blank"
+          >Şartname</a
         >
       </div>
       <div class="footer__end">
@@ -71,6 +104,7 @@
             <a
               href="mailto:gelecekkalemlerkomitesi@gmail.com"
               class="footer__end-list__link"
+              aria-label="Elektronik Posta Adresi"
             >
               <svg class="icon icon-mail footer__end-list__link">
                 <use
@@ -80,7 +114,12 @@
             </a>
           </li>
           <li class="footer__end-list__item">
-            <a href="" class="footer__end-list__link">
+            <a
+              href="https://www.instagram.com/gelecekkalemler/"
+              class="footer__end-list__link"
+              target="_blank"
+              aria-label="Instagram Adresi"
+            >
               <svg class="icon icon-mail footer__end-list__link">
                 <use
                   xlink:href="{% static 'components/symbol-defs.svg' %}#icon-instagram"
@@ -89,7 +128,11 @@
             </a>
           </li>
           <li class="footer__end-list__item">
-            <a href="" class="footer__end-list__link">
+            <a
+              href="tel:+90 212 227 46 10"
+              class="footer__end-list__link"
+              aria-label="Telefon Numarası"
+            >
               <svg class="icon icon-mail footer__end-list__link">
                 <use
                   class="footer__end-list__link"

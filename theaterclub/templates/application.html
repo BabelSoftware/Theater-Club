@@ -1,4 +1,11 @@
 {% extends 'base.html' %} {% load static %} {% block main %}
+
+<section class="section-application">
+  <h2 class="section-application__heading">Başvurular Kapalı</h2>
+  <p class="section-application__text">Başvurular 29.03.2023 tarihinde başlayacaktır</p>
+</section>
+
+{% comment %} Do not turn this on until 29.03.2023 {% endcomment %} {% comment%}
 <section class="section-application">
   <form class="application-form" action="/application" method="POST">
     {% csrf_token %}
@@ -69,4 +76,4 @@
     </button>
   </form>
 </section>
-{% endblock main %}
+{% endcomment %} {% endblock main %}

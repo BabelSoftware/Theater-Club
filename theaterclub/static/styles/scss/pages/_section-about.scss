@@ -1,0 +1,36 @@
+.section-about {
+  width: 100%;
+  padding-block: 15rem;
+  background-color: map-get($colours, light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: min(2rem, 2vmax);
+  border-bottom: 0.1rem map-get($colours, grey-light-1) solid;
+
+  &__heading {
+    font-size: map-get($font-sizes, xxxxl);
+    font-weight: map-get($font-weights, bold);
+    color: map-get($colours, dark);
+  }
+
+  &__text {
+    font-size: map-get($font-sizes, l);
+    font-weight: map-get($font-weights, regular);
+    color: map-get($colours, dark);
+    padding-inline: 30rem;
+    line-height: 1.6;
+  }
+
+  &__link {
+    color: map-get($colours, primary);
+    text-decoration: none;
+    font-size: map-get($font-sizes, l);
+    font-weight: map-get($font-weights, regular);
+  }
+
+  &__link:hover {
+    color: map-get($colours, primary-dark);
+    transition: all 0.3s ease-in-out;
+  }
+}

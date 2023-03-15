@@ -1,0 +1,85 @@
+.section-hero {
+  background-image: url("../../components/section-hero-bg.webp");
+  backdrop-filter: blur(10px);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: calc(100vh - 7rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__logo {
+    width: 25%;
+    height: auto;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    color: map-get($colours, light);
+    width: 40%;
+    backdrop-filter: blur(0px);
+    padding-inline: 3rem;
+    padding-block: 5rem;
+    background-color: rgba(map-get($colours, grey-light-2), 0.8);
+    border-radius: 2rem;
+    align-items: center;
+    &-heading {
+      color: map-get($colours, dark);
+      font-size: map-get($font-sizes, heading);
+      font-weight: map-get($font-weights, regular);
+    }
+
+    &-text {
+      color: map-get($colours, dark);
+      font-size: map-get($font-sizes, m);
+      font-weight: map-get($font-weights, regular);
+      font-style: italic;
+    }
+  }
+}
+
+.pop-up {
+  position: fixed;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: lighten(rgba(map-get($colours, dark), 0.9), 10%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__container {
+    background-color: map-get($colours, light);
+    width: 100rem;
+    height: 75rem;
+    border-radius: 2rem;
+    padding: 2rem;
+
+    &-top {
+      width: 100%;
+      height: 5rem;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+
+      &__btn {
+        position: relative;
+        color: map-get($colours, dark);
+        font-size: map-get($font-sizes, m);
+      }
+
+      &__btn:hover{
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.pop-up.closed {
+  display: none;
+}
