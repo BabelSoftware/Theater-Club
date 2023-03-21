@@ -9,6 +9,7 @@
 
 html {
   min-height: 100vh;
+  width: 100vw;
   scroll-behavior: smooth;
   font-size: 62.5%;
 }
@@ -18,6 +19,10 @@ body.closed {
 }
 
 body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
   font-size: 1.6rem;
   min-height: 100vh;
   font-family: "Roboto";
