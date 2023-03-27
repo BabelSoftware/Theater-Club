@@ -37,6 +37,10 @@ body::-webkit-scrollbar {
   display: none; /* Chrome and Safari */
 }
 
+main {
+  width: 100%;
+}
+
 svg {
   display: inline-block;
   width: 1em;
